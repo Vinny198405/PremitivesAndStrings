@@ -21,7 +21,7 @@ public abstract class PerformanceTests {
         double endTime = System.currentTimeMillis();
 
         System.out.format(
-                "Test %s [total runs: %d] performed in %f milliseconds",
+                "%s [total runs: %d] performed per %f ms",
                 testName,
                 nRuns,
                 endTime - startTime
