@@ -20,7 +20,6 @@ public abstract class PerformanceTests {
 
         double endTime = System.currentTimeMillis();
 
-        System.out.format("%s completed %d times in %f ms", testName, nRuns, endTime - startTime);
-        System.out.println();
+        System.out.format("%s completed %d times in %f ms \n", testName, nRuns, endTime - startTime);
     }
 }
