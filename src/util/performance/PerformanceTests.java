@@ -4,7 +4,7 @@ public abstract class PerformanceTests {
     private String testName;
     private Integer nRuns;
 
-    public PerformanceTests(String testName, Integer nRuns) {
+    PerformanceTests(String testName, Integer nRuns) {
         this.testName = testName;
         this.nRuns = nRuns;
     }

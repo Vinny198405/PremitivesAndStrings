@@ -7,11 +7,10 @@ public class JoinStringsPerformanceTestAppl {
         int runsAmount = 10000;
         String[] str = {"Hello", "World"};
 
-        JoinStringsPerformance concatenationTest = new JoinStringsPerformance("Concatenation", runsAmount, str, new JoinStringsImplString());
+        JoinStringsPerformance stringTest = new JoinStringsPerformance("String Test", runsAmount, str, new JoinStringsImplString());
+        JoinStringsPerformance builderTest = new JoinStringsPerformance("Builder Test", runsAmount, str, new JoinStringsImplBuilder());
 
-        JoinStringsPerformance builderTest = new JoinStringsPerformance("Builder", runsAmount, str, new JoinStringsImplBuilder());
-
-        concatenationTest.run();
+        stringTest.run();
         builderTest.run();
     }
 }
