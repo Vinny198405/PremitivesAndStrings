@@ -4,13 +4,15 @@ import util.performance.JoinStringsPerformance;
 
 public class JoinStringsPerformanceTestAppl {
     public static void main(String[] args) {
-        Integer runsAmount = 100000;
-        String[] str = {"Hello", "World"};
+        int runsAmount = 10000;
+        int nStrings = 1000;
 
-        JoinStringsPerformance stringTest = new JoinStringsPerformance("String Test", runsAmount, str, new JoinStringsImplString());
-        JoinStringsPerformance builderTest = new JoinStringsPerformance("Builder Test", runsAmount, str, new JoinStringsImplBuilder());
+        JoinStringsPerformance stringTest = new JoinStringsPerformance("String Test", runsAmount, nStrings, new JoinStringsImplString());
+        JoinStringsPerformance builderTest = new JoinStringsPerformance("Builder Test", runsAmount, nStrings, new JoinStringsImplBuilder());
 
         stringTest.run();
         builderTest.run();
+        int e = new int[4][8].length;
+        System.out.println(e);
     }
 }

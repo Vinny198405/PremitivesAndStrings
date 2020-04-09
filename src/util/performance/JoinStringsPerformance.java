@@ -4,10 +4,17 @@ public class JoinStringsPerformance extends PerformanceTests {
     private String[] strings;
     private JoinStringsInterface joinStrings;
 
-    public JoinStringsPerformance(String testName, Integer nRuns, String[] strings, JoinStringsInterface joinStrings) {
+    public JoinStringsPerformance(String testName, int nRuns, int nStrings, JoinStringsInterface joinStrings) {
         super(testName, nRuns);
-        this.strings = strings;
         this.joinStrings = joinStrings;
+        addArrayStrings(nStrings);
+    }
+
+    private void addArrayStrings(int nStrings) {
+        strings = new String[nStrings];
+        for(int i = 0; i < nStrings; i++){
+            strings[i] = "Hello";
+        }
     }
 
     @Override

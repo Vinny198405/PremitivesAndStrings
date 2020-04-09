@@ -5,12 +5,11 @@ import util.performance.JoinStringsInterface;
 public class JoinStringsImplString implements JoinStringsInterface {
     @Override
     public String join(String[] strings, String delimiter) {
-        String res = "";
+        String res = strings[0];
         int size = strings.length;
 
-        for (int i = 0; i < size; i++) {
-            if (i != 0) res += delimiter;
-            res += strings[i];
+        for (int i = 1; i < size; i++) {
+            res += delimiter + strings[i];
         }
 
         return res;
